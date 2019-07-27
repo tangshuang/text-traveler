@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<style>
+#container::after {
+  content: ' ';
+  display: inline-block;
+  width: 8px;
+  margin-left: 2px;
+  border-bottom: 2px solid transparent;
+  animation: blink-caret .75s step-end infinite;
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: currentColor; }
+}
+</style>
+
+<div id="container"></div>
+
+<script src="./text-traveler.js"></script>
+<script>
+  const container = document.querySelector('#container')
+  const write = createWriter(container, true)
+
+  write`
+    Hello, ${[100,500]}nice to meet you.${[100,1000]}
+    I am Frustigor.${[100,1000,1,200]}
+    If you want a cup of coffee,${[100,500]} call me later.${[100, 200]}
+
+    Today is sunny.${[100, 100]}
+    Enjoy it!${[100, 2000]}
+  `
+</script>
