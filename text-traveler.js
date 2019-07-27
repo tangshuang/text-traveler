@@ -136,7 +136,7 @@ function travelText(strs, ...args) {
   return traveler
 }
 
-function createWriter(container, loop) {
+function createTextWriter(container, loop) {
   return function(strs, ...args) {
     const traveler = travelText(strs, ...args)
     traveler.on('type', (text) => {

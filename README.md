@@ -27,14 +27,14 @@ The 4 value stand for:
 - interlude time before next paragraphs
 
 Use `on` to listen what happend when travel, and do something this these callback functions.
-TextTravler do not care what to do for your UI, it just travel the text. You should change your UI in `on` callbacks, or you can use `createWriter`.
+TextTravler do not care what to do for your UI, it just travel the text. You should change your UI in `on` callbacks, or you can use `createTextWriter`.
 
-## createWriter
+## createTextWriter
 
 A travel-writer function will be create by using this function.
 
 ```js
-const write = createWriter(document.querySelector('#book'), false)
+const write = createTextWriter(document.querySelector('#book'), false)
 ```
 
 Params:
