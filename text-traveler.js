@@ -70,6 +70,8 @@ class TextTraveler {
       await sleep(interlude)
     }
 
+    this.emit('leave', item)
+
     await this.iterate()
   }
 
